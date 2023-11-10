@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="heading">
+    <p class="chefs-header">chefs</p>
+    <p class="p-words">Our <span class="colored">Proffesional</span> Chefs</p>
+  </div>
+
+  <div class="chefs-section">
+    <ng-container *ngFor="let item of chefs">
+      <div class="card">
+        <img [src]="item.img" alt="" />
+        <p class="name">{{ item.name }}</p>
+        <p class="position">{{ item.position }}</p>
+        <p class="desc">{{ item.letter }}</p>
+        <div class="social-icons">
+          <a> <fa-icon [icon]="facebook"></fa-icon> </a>
+          <a><fa-icon [icon]="twitter"></fa-icon></a>
+          <a><fa-icon [icon]="instagram"></fa-icon></a>
+          <a><fa-icon [icon]="linkedin"></fa-icon></a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

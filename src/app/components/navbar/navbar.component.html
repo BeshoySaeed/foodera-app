@@ -1,0 +1,38 @@
+<div class="container">
+  <nav>
+    <div class="logo">foodera <span>.</span></div>
+    <ul class="links">
+      <li>
+        <a
+          (click)="scrollTo('banner')"
+          [class.active]="activeLinkId === 'banner'"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a (click)="scrollTo('chefs')" [class.active]="activeLinkId === 'chefs'"
+          >Chefs</a
+        >
+      </li>
+      <li>
+        <a
+          (click)="scrollTo('food')"
+          [class.active]="activeLinkId === 'banner'"
+          [class.active]="activeLinkId === 'food'"
+          >Gallery</a
+        >
+      </li>
+      <li>
+        <a (click)="scrollTo('map')" [class.active]="activeLinkId === 'map'"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <div class="color-icon">
+      <a (click)="moodClick()">
+        <fa-icon [icon]="whiteMoon" *ngIf="!mood"></fa-icon>
+        <fa-icon [icon]="darkMoon" *ngIf="mood" class="white"></fa-icon>
+      </a>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,165 @@
+.container {
+  display: flex;
+  padding: 0px 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+
+  @media (max-width: 990px) {
+    & {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .data {
+    .heading {
+      width: 400px;
+      font-family: "Anton", sans-serif;
+      font-family: "Dancing Script", cursive;
+      font-family: "Teko", sans-serif;
+      font-size: 62px;
+      color: var(--text-header-color);
+    }
+    .para {
+      color: var(--text-link-color);
+      width: 80%;
+    }
+    .links-data {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5%;
+      margin-top: 20px;
+
+      button {
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 0 24px 24px 24px;
+        border: none;
+        background-color: rgb(182, 4, 4);
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background-color: red;
+        }
+      }
+      .play {
+        display: flex;
+        font-size: 24px;
+        align-items: center;
+
+        &:hover {
+          p {
+            color: red;
+          }
+          circle {
+            display: none;
+          }
+        }
+        p {
+          margin-left: 10px;
+          color: var(--text-link-color);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .img {
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: auto;
+      &:hover {
+        animation: vibration 0.4s infinite linear;
+      }
+    }
+  }
+}
+
+@keyframes vibration {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .data {
+    .heading {
+      font-size: 8vw;
+    }
+    .para {
+      width: 100%;
+      font-size: 4vw;
+    }
+    .links-data {
+      button {
+        font-size: 3vw;
+        padding: 2vw 3vw;
+      }
+      .play {
+        font-size: 4vw;
+        p {
+          margin-left: 3vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .data {
+    .heading {
+      font-size: 6vw;
+    }
+    .para {
+      width: 90%;
+      font-size: 3vw;
+    }
+    .links-data {
+      button {
+        font-size: 2vw;
+        padding: 1.5vw 2vw;
+      }
+      .play {
+        font-size: 3vw;
+        p {
+          margin-left: 2vw;
+        }
+      }
+    }
+  }
+}

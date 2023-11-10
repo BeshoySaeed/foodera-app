@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-background-color);
+}
+// .container {
+//   background-color: white;
+// }
+
+body {
+  --body-background-color: #eeeeee;
+  --container-background-color: #fff;
+  --text-header-color: black;
+  --text-link-color: gray;
+  --text-link-hover: black;
+  // dark mood
+  &.dark {
+    --body-background-color: #252525;
+    --container-background-color: #171717;
+    --text-header-color: white;
+    --text-link-color: rgb(225, 221, 221);
+    --text-link-hover: rgb(255, 255, 255);
+  }
+}
