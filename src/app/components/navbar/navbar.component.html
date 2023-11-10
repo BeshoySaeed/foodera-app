@@ -1,7 +1,7 @@
 <div class="container">
   <nav>
     <div class="logo">foodera <span>.</span></div>
-    <ul class="links">
+    <ul class="links" #links>
       <li>
         <a
           (click)="scrollTo('banner')"
@@ -29,6 +29,13 @@
       </li>
     </ul>
     <div class="color-icon">
+      <a (click)="sideBar()">
+        <fa-icon
+          [icon]="bars"
+          class="nav-bars"
+          [ngClass]="mood ? 'white' : ''"
+        ></fa-icon>
+      </a>
       <a (click)="moodClick()">
         <fa-icon [icon]="whiteMoon" *ngIf="!mood"></fa-icon>
         <fa-icon [icon]="darkMoon" *ngIf="mood" class="white"></fa-icon>

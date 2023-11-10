@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { faMoon as whiteMoon } from '@fortawesome/free-regular-svg-icons';
 import { faMoon as darkMoon } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -11,12 +12,16 @@ export class NavbarComponent {
   whiteMoon: any;
   darkMoon: any;
   activeLinkId: any;
+  bars: any;
 
   mood: boolean = false;
+
+  @ViewChild('links', { read: ElementRef }) list!: ElementRef;
 
   constructor() {
     this.whiteMoon = whiteMoon;
     this.darkMoon = darkMoon;
+    this.bars = faBars;
   }
 
   ngOnInit() {
@@ -67,5 +72,13 @@ export class NavbarComponent {
 
   ngOnDestory() {
     window.removeEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  sideBar() {
+    if (this.list.nativeElement.classList.contains('view')) {
+      this.list.nativeElement.classList.remove('view');
+    } else {
+      this.list.nativeElement.classList.add('view');
+    }
   }
 }
