@@ -1,6 +1,8 @@
 <div class="container">
   <nav>
-    <div class="logo">foodera <span>.</span></div>
+    <div class="logo">
+      <a routerLink="">foodera <span>.</span> </a>
+    </div>
     <ul class="links" #links>
       <li>
         <a
@@ -35,6 +37,9 @@
           class="nav-bars"
           [ngClass]="mood ? 'white' : ''"
         ></fa-icon>
+      </a>
+      <a routerLink="login" style="color: black">
+        <fa-icon [icon]="login" [ngClass]="mood ? 'white' : ''"></fa-icon>
       </a>
       <a (click)="moodClick()">
         <fa-icon [icon]="whiteMoon" *ngIf="!mood"></fa-icon>

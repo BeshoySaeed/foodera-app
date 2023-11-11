@@ -1,7 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { faMoon as whiteMoon } from '@fortawesome/free-regular-svg-icons';
-import { faMoon as darkMoon } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMoon as darkMoon,
+  faBars,
+  faRightToBracket,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -13,6 +16,7 @@ export class NavbarComponent {
   darkMoon: any;
   activeLinkId: any;
   bars: any;
+  login: any;
 
   mood: boolean = false;
 
@@ -22,6 +26,7 @@ export class NavbarComponent {
     this.whiteMoon = whiteMoon;
     this.darkMoon = darkMoon;
     this.bars = faBars;
+    this.login = faRightToBracket;
   }
 
   ngOnInit() {

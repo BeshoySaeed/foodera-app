@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="container-form border-round-lg">
+    <p><span class="word-color">Login</span></p>
+    <span
+      class="pi pi-user"
+      style="font-size: 44px; margin-bottom: 40px"
+    ></span>
+
+    <form [formGroup]="formGroup" #loginForm="ngForm">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <fa-icon [icon]="darkUser"></fa-icon>
+        </span>
+        <input
+          type="text"
+          pInputText
+          placeholder="Email.."
+          formControlName="email"
+        />
+      </div>
+      <div
+        class="errors"
+        [hidden]="formGroup.get('email')?.untouched"
+        class="text-red-400"
+      >
+        <small *ngIf="formGroup.get('email')?.errors?.['required']"
+          >email required</small
+        >
+        <small *ngIf="formGroup.get('email')?.errors?.['pattern']"
+          >Sorry, your email was incorrect. Please double-check your
+          email.</small
+        >
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <fa-icon [icon]="lock"></fa-icon>
+        </span>
+        <input
+          type="password"
+          pInputText
+          placeholder="Password.."
+          formControlName="password"
+        />
+      </div>
+      <div
+        class="errors"
+        [hidden]="formGroup.get('password')?.untouched"
+        class="text-red-400"
+      >
+        <small *ngIf="formGroup.get('password')?.errors?.['required']"
+          >password required</small
+        >
+        <small *ngIf="formGroup.get('password')?.errors?.['pattern']"
+          >Sorry, your password was incorrect. Please double-check your
+          password.</small
+        >
+      </div>
+
+      <button
+        class="my-5 px-4 py-2 border-round bg-bluegray-900 text-white cursor-pointer"
+        [disabled]="loginForm.invalid"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>

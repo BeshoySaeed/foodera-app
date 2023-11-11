@@ -8,11 +8,14 @@
     padding: 20px;
 
     .logo {
-      font-size: 34px;
-      font-weight: bold;
-      padding: 10px 20px;
-      position: relative;
-      color: var(--text-header-color);
+      a {
+        font-size: 34px;
+        font-weight: bold;
+        padding: 10px 20px;
+        position: relative;
+        color: var(--text-header-color);
+        text-decoration: none;
+      }
       span {
         color: red;
         position: absolute;
@@ -74,7 +77,7 @@
           // display: none;
           position: absolute;
           flex-direction: column;
-          top: 100px;
+          top: 80px;
           right: -350px;
           background-color: var(--container-background-color);
           width: 350px;
@@ -82,7 +85,6 @@
           padding-top: 20px;
           padding-left: 20px;
           transition: 0.3s;
-
           &.view {
             right: 0px;
           }
@@ -98,6 +100,7 @@
       fa-icon {
         font-size: 24px;
         margin-right: 30px;
+        cursor: pointer;
       }
     }
   }

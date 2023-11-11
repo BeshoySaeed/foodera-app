@@ -10,6 +10,9 @@ import { GallerySectionComponent } from './components/gallery-section/gallery-se
 import { LocationContactComponent } from './components/location-contact/location-contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ChiefSectionComponent,
     GallerySectionComponent,
     LocationContactComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

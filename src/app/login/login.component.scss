@@ -1,0 +1,52 @@
+.container {
+  margin-top: 100px;
+  height: 480px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .container-form {
+    background-color: white;
+    width: fit-content;
+    height: 90%;
+    text-align: center;
+    // padding-top: 25px;
+    padding: 25px 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media (max-width: 400px) {
+      & {
+        width: 300px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      padding: 10px 0 20px;
+      font-weight: bold;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .p-inputgroup {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+input {
+  padding: 10px 10px 10px 5px;
+  font-size: 18px;
+  width: 280px;
+
+  @media (max-width: 400px) {
+    & {
+      width: 230px;
+    }
+  }
+}
