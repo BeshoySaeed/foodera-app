@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { ChiefSectionComponent } from './components/chief-section/chief-section.component';
-import { GallerySectionComponent } from './components/gallery-section/gallery-section.component';
-import { LocationContactComponent } from './components/location-contact/location-contact.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './Home/navbar/navbar.component';
+import { BannerComponent } from './Home/banner/banner.component';
+import { ChiefSectionComponent } from './Home/chief-section/chief-section.component';
+import { GallerySectionComponent } from './Home/gallery-section/gallery-section.component';
+import { LocationContactComponent } from './Home/location-contact/location-contact.component';
+import { FooterComponent } from './Home/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './shared-forms/login/login.component';
+import { HomeComponent } from './Home/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenudItemsModule } from './menud-items/menud-items.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    MenudItemsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

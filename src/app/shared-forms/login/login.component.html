@@ -22,6 +22,7 @@
         class="errors"
         [hidden]="formGroup.get('email')?.untouched"
         class="text-red-400"
+        style="width: 300px"
       >
         <small *ngIf="formGroup.get('email')?.errors?.['required']"
           >email required</small
@@ -46,6 +47,7 @@
         class="errors"
         [hidden]="formGroup.get('password')?.untouched"
         class="text-red-400"
+        style="width: 300px"
       >
         <small *ngIf="formGroup.get('password')?.errors?.['required']"
           >password required</small
