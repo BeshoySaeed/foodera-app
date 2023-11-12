@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]="card.img" alt="" />
+  <div class="title-fav">
+    <p>{{ card.name }}</p>
+    <fa-icon [icon]="heart"></fa-icon>
+  </div>
+  <div class="describe">{{ card.description }}</div>
+  <div class="price">{{ card.price | currency }}</div>
+
+  <button>Add to cart</button>
+</div>

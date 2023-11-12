@@ -1,0 +1,115 @@
+<div class="container">
+  <h2>Register Form</h2>
+  <form action="#" method="POST" [formGroup]="formGroup" #form="ngForm">
+    <div class="form-group">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        formControlName="name"
+        placeholder="Name"
+      />
+      <label for="name">Name</label>
+      <div class="errors" *ngIf="!this.formGroup.get('name')?.untouched">
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('name')?.errors?.['required']"
+          >name field is required</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+        placeholder="email"
+      />
+      <label for="email">Email</label>
+      <div class="errors" *ngIf="!this.formGroup.get('email')?.untouched">
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('email')?.errors?.['required']"
+          >email field is required</small
+        >
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('email')?.errors?.['pattern']"
+          >not valid email</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        formControlName="phone"
+        placeholder="phone"
+      />
+      <label for="phone">Phone</label>
+      <div class="errors" *ngIf="!this.formGroup.get('phone')?.untouched">
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('phone')?.errors?.['required']"
+          >phone field is required</small
+        >
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('phone')?.errors?.['pattern']"
+          >not valid phone</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+        placeholder="password"
+        [(ngModel)]="password"
+      />
+      <label for="password">Password</label>
+      <div class="errors" *ngIf="!this.formGroup.get('password')?.untouched">
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('password')?.errors?.['required']"
+          >password field is required</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        formControlName="confirm"
+        placeholder="confirm password"
+        [pattern]="password"
+      />
+      <label for="confirm-password">Confirm Password</label>
+      <div class="errors" *ngIf="!this.formGroup.get('confirm')?.untouched">
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('confirm')?.errors?.['required']"
+          >confirm password field is required</small
+        >
+        <small
+          class="text-orange-900"
+          *ngIf="this.formGroup.get('confirm')?.errors?.['pattern']"
+          >confirm password field is not valid</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn" [disabled]="form.invalid">
+        Register
+      </button>
+      <a routerLink="/login" style="text-decoration: none">
+        <button type="submit" class="btn mt-3">LogIn</button>
+      </a>
+    </div>
+  </form>
+</div>

@@ -58,12 +58,25 @@
         >
       </div>
 
-      <button
-        class="my-5 px-4 py-2 border-round bg-bluegray-900 text-white cursor-pointer"
-        [disabled]="loginForm.invalid"
-      >
-        Login
-      </button>
+      <div class="remember">
+        <a href="">forget your password</a>
+      </div>
+
+      <div class="buttons mt-5">
+        <button
+          class="px-4 py-2 border-round bg-bluegray-900 text-white cursor-pointer"
+          [disabled]="loginForm.invalid"
+        >
+          Login
+        </button>
+        <a routerLink="/register">
+          <button
+            class="px-4 py-2 border-round bg-bluegray-900 text-white cursor-pointer"
+          >
+            Sign Up
+          </button>
+        </a>
+      </div>
     </form>
   </div>
 </div>

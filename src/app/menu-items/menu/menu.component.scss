@@ -1,0 +1,32 @@
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .menu-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin-right: 10px;
+
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: bold;
+          color: rgb(133, 131, 131);
+        }
+      }
+    }
+  }
+}

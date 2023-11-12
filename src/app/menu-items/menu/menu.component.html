@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="menu-nav">
+    <ul>
+      <li>
+        <a href=""> Deals </a>
+      </li>
+      <li>
+        <a href=""> For One </a>
+      </li>
+      <li>
+        <a href=""> For Sharing </a>
+      </li>
+      <li>
+        <a href=""> Sides & Deserts </a>
+      </li>
+      <li>
+        <a href=""> Beverage </a>
+      </li>
+      <li>
+        <a href=""> My Favorites </a>
+      </li>
+    </ul>
+    <input type="search" name="search" id="" />
+  </div>
+  <div class="flex flex-wrap justify-content-center align-items-center">
+    <ng-container *ngFor="let item of items">
+      <app-item [card]="item"></app-item>
+    </ng-container>
+  </div>
+</div>

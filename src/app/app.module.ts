@@ -13,7 +13,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './shared-forms/login/login.component';
 import { HomeComponent } from './Home/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MenudItemsModule } from './menud-items/menud-items.module';
+import { RegisterComponent } from './register/register.component';
+import { CartComponent } from './cart/cart.component';
+import { MenuItemsModule } from './menu-items/menu-items.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { MenudItemsModule } from './menud-items/menud-items.module';
     FooterComponent,
     LoginComponent,
     HomeComponent,
+    RegisterComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { MenudItemsModule } from './menud-items/menud-items.module';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    MenudItemsModule,
+    MenuItemsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
