@@ -1,0 +1,61 @@
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 30px;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transition: 0.3s;
+  color: transparent;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(169, 169, 235);
+
+  &:focus {
+    border-bottom: 1px solid rgb(255, 123, 0);
+  }
+}
+input:focus + label {
+  top: -15px;
+  left: 0;
+  color: rgb(0, 0, 0);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}

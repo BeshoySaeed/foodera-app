@@ -73,10 +73,20 @@
       border-radius: 50%;
       width: 100%;
       height: auto;
+      animation: rtato 4s infinite linear;
       &:hover {
         animation: vibration 0.4s infinite linear;
       }
     }
+  }
+}
+
+@keyframes rtato {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

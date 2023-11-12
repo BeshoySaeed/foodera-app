@@ -4,6 +4,7 @@ import {
   faMoon as darkMoon,
   faBars,
   faRightToBracket,
+  faCartShopping,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -17,6 +18,7 @@ export class NavbarComponent {
   activeLinkId: any;
   bars: any;
   login: any;
+  cart: any;
 
   mood: boolean = false;
 
@@ -27,6 +29,7 @@ export class NavbarComponent {
     this.darkMoon = darkMoon;
     this.bars = faBars;
     this.login = faRightToBracket;
+    this.cart = faCartShopping;
   }
 
   ngOnInit() {
