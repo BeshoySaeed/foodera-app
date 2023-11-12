@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { CartComponent } from './cart/cart.component';
+import { MenuItemsModule } from './menu-items/menu-items.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { RegisterComponent } from './register/register.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    MenuItemsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
